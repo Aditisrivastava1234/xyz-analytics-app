@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, CircularProgress, Typography, Button } from '@mui/material';
-import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import styles from './TableauEmbed.module.css';
 
 const TABLEAU_BASE_URLS = {
@@ -17,44 +16,37 @@ const TABLEAU_VIEWER_URLS = {
     'https://public.tableau.com/app/profile/aditi.srivastava6534/viz/XYZRetailSalesQualityAnalyticsDashboard/QualityDashboard?publish=yes',
 };
 
-// :render=false + device=desktop forces Tableau to fill the iframe fully
-// const buildEmbedUrl = (baseUrl) =>
-//   `${baseUrl}?:embed=y&:showVizHome=no&:toolbar=bottom&:animate_transition=yes&:display_count=no&:tabs=no&:device=desktop&:render=false&:revert=all`;
-const buildEmbedUrl = (baseUrl) =>
-  `${baseUrl}?:embed=y&:showVizHome=no&:toolbar=bottom&:animate_transition=yes&:display_count=no&:tabs=no&:device=desktop&:revert=all`;
+const buildEmbedUrl = (baseUrl, isMobile) => {
+  // On mobile: use device=phone so Tableau serves the Phone layout (which you've configured)
+  // On desktop: use device=desktop
+  const device = isMobile ? 'phone' : 'desktop';
+  return `${baseUrl}?:embed=y&:showVizHome=no&:toolbar=bottom&:animate_transition=yes&:display_count=no&:tabs=no&:device=${device}&:revert=all`;
+};
+
 const TableauEmbed = ({ dashboardType, title }) => {
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [error, setError]     = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
 
-  const embedUrl = buildEmbedUrl(TABLEAU_BASE_URLS[dashboardType]);
+  // Re-check on resize
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 900);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Reset loading state when device type changes
+  useEffect(() => {
+    setLoading(true);
+    setError(false);
+  }, [isMobile]);
+
+  const embedUrl  = buildEmbedUrl(TABLEAU_BASE_URLS[dashboardType], isMobile);
   const viewerUrl = TABLEAU_VIEWER_URLS[dashboardType];
 
   return (
     <Box className={styles.embedWrapper}>
-      {/* Header */}
-      {/* <Box className={styles.embedHeader}>
-        <Box className={styles.headerDots}>
-          <span className={`${styles.dot} ${styles.dotRed}`} />
-          <span className={`${styles.dot} ${styles.dotYellow}`} />
-          <span className={`${styles.dot} ${styles.dotGreen}`} />
-        </Box>
-        <Box className={styles.urlBar}>
-          <Typography variant="caption" className={styles.urlText}>
-            public.tableau.com › {title}
-          </Typography>
-        </Box>
-        <Button
-          size="small"
-          endIcon={<OpenInNewRoundedIcon sx={{ fontSize: '13px !important' }} />}
-          onClick={() => window.open(viewerUrl, '_blank')}
-          className={styles.openBtn}
-        >
-          Open Full View
-        </Button>
-      </Box> */}
-
-      {/* Responsive iframe wrapper using padding-bottom aspect ratio trick */}
-      <Box className={styles.iframeContainer}>
+      <Box className={`${styles.iframeContainer} ${isMobile ? styles.iframeContainerMobile : ''}`}>
         {loading && !error && (
           <Box className={styles.loadingOverlay}>
             <CircularProgress size={36} sx={{ color: '#18837E' }} />
@@ -90,9 +82,10 @@ const TableauEmbed = ({ dashboardType, title }) => {
         )}
 
         <iframe
+          key={embedUrl}  /* force re-mount when URL changes */
           src={embedUrl}
           title={title}
-          onLoad={() => setTimeout(() => setLoading(false), 2000)}
+          onLoad={() => setTimeout(() => setLoading(false), 2500)}
           onError={() => { setLoading(false); setError(true); }}
           className={styles.iframe}
           frameBorder="0"
