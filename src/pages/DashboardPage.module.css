@@ -1,0 +1,44 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background: #F2F2F2;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.alertBox {
+  padding: 12px 24px 8px;
+  flex-shrink: 0;
+}
+
+.embedSection {
+  flex: 1;
+  padding: 0 24px 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Make embedWrapper fill remaining height */
+.embedSection > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .alertBox {
+    padding: 8px 16px 6px;
+  }
+  .embedSection {
+    padding: 0 16px 12px;
+  }
+}

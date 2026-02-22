@@ -1,0 +1,111 @@
+.appBar {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  color: #1A1A2E !important;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px !important;
+  min-height: 64px !important;
+  gap: 16px;
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.breadcrumb {
+  color: rgba(0, 0, 0, 0.4) !important;
+  font-size: 0.7rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.pageTitle {
+  color: #1A1A2E !important;
+  font-weight: 700 !important;
+  font-size: 1.25rem !important;
+  line-height: 1.3 !important;
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+.pageSubtitle {
+  color: rgba(0, 0, 0, 0.45) !important;
+  font-size: 0.8rem !important;
+  font-family: 'DM Sans', sans-serif !important;
+  margin-top: 1px !important;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.liveChip {
+  background: rgba(76, 175, 80, 0.1) !important;
+  border: 1px solid rgba(76, 175, 80, 0.3) !important;
+  color: #2E7D32 !important;
+  font-size: 0.7rem !important;
+  height: 26px !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.dateText {
+  color: rgba(0, 0, 0, 0.45) !important;
+  font-size: 0.75rem !important;
+  font-family: 'DM Sans', sans-serif !important;
+  white-space: nowrap;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 4px;
+}
+
+.iconBtn {
+  color: rgba(0, 0, 0, 0.45) !important;
+  transition: all 0.2s ease !important;
+  border-radius: 8px !important;
+}
+
+.iconBtn:hover {
+  color: #18837E !important;
+  background: rgba(24, 131, 126, 0.08) !important;
+}
+
+.avatar {
+  width: 34px !important;
+  height: 34px !important;
+  background: linear-gradient(135deg, #18837E, #004975) !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(24, 131, 126, 0.35) !important;
+}
+
+@media (max-width: 768px) {
+  .dateText {
+    display: none;
+  }
+
+  .liveChip {
+    display: none;
+  }
+}

@@ -1,0 +1,273 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #F2F2F2;
+}
+
+.content {
+  flex: 1;
+}
+
+.heroSection {
+  position: relative;
+  background: linear-gradient(135deg, #18837E 0%, #004975 100%);
+  padding: 48px 40px;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 50%, rgba(219, 48, 105, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(152, 130, 172, 0.15) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.heroBadge {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.72rem !important;
+  margin-bottom: 16px !important;
+}
+
+.heroTitle {
+  color: #fff !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 2rem !important;
+  line-height: 1.25 !important;
+  margin-bottom: 16px !important;
+}
+
+.accent {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.heroDesc {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  line-height: 1.7 !important;
+  max-width: 580px;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.section {
+  padding: 40px 40px;
+  background: #F2F2F2;
+}
+
+.sectionLabel {
+  color: #18837E !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.68rem !important;
+  letter-spacing: 0.12em !important;
+  font-weight: 600 !important;
+}
+
+.sectionTitle {
+  color: #1A1A2E !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+  margin-bottom: 24px !important;
+  margin-top: 4px !important;
+  font-size: 1.4rem !important;
+}
+
+/* Design Cards */
+.designCard {
+  border-radius: 16px !important;
+  border: 1px solid rgba(0, 0, 0, 0.04) !important;
+  height: 100%;
+}
+
+.designCardContent {
+  padding: 24px !important;
+}
+
+.designIcon {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+  margin-bottom: 16px !important;
+}
+
+.designTitle {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  margin-bottom: 8px !important;
+}
+
+.designDesc {
+  color: rgba(0, 0, 0, 0.55) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  line-height: 1.65 !important;
+  font-size: 0.85rem !important;
+}
+
+/* Data Cards */
+.dataCard {
+  border-radius: 16px !important;
+  border: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+.dataCardName {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  margin-bottom: 4px !important;
+}
+
+.dataCardSub {
+  color: rgba(0, 0, 0, 0.4) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.75rem !important;
+  display: block;
+  margin-bottom: 16px !important;
+}
+
+.metricsList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metricItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.metricText {
+  color: rgba(0, 0, 0, 0.6) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.8rem !important;
+}
+
+/* Assumptions */
+.assumptionsCard {
+  border-radius: 16px !important;
+  border: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+.assumptionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.assumptionItem:last-child {
+  border-bottom: none;
+}
+
+.assumptionNumber {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.assumptionText {
+  color: rgba(0, 0, 0, 0.65) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  line-height: 1.6 !important;
+  font-size: 0.875rem !important;
+}
+
+/* Tech Grid */
+.techGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.techChip {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 1px solid;
+  cursor: default;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 120px;
+}
+
+.techName {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+}
+
+.techCategory {
+  font-family: 'DM Sans', sans-serif !important;
+  color: rgba(0, 0, 0, 0.4) !important;
+  font-size: 0.7rem !important;
+  margin-top: 2px !important;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 32px 20px;
+  }
+
+  .heroTitle {
+    font-size: 1.6rem !important;
+  }
+
+  .section {
+    padding: 28px 20px;
+  }
+}
+
+/* ── Hero Stats Row (new) ── */
+.statsRow {
+  display: flex;
+  gap: 32px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statValue {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+}
+
+.statLabel {
+  font-family: 'DM Sans', sans-serif !important;
+  color: rgba(255,255,255,0.6) !important;
+  font-size: 0.72rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

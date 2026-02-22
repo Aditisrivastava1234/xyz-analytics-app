@@ -1,0 +1,171 @@
+.logoSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px 16px;
+  min-height: 80px;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+}
+
+/* XYZ Logo Image Box */
+.logoImageBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(24, 131, 126, 0.4);
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.brandName {
+  color: #fff !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  line-height: 1.2 !important;
+  white-space: nowrap;
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+.brandSubtitle {
+  color: rgba(255, 255, 255, 0.55) !important;
+  font-size: 0.68rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+.collapseBtn {
+  color: rgba(255, 255, 255, 0.6) !important;
+  flex-shrink: 0;
+  transition: color 0.2s ease !important;
+}
+
+.collapseBtn:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.divider {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  margin: 0 16px !important;
+}
+
+.navLabel {
+  display: block;
+  color: rgba(255, 255, 255, 0.35) !important;
+  font-size: 0.65rem !important;
+  letter-spacing: 0.12em !important;
+  padding: 16px 20px 8px !important;
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+.navList {
+  padding: 4px 8px !important;
+  flex: 1;
+}
+
+.navItem {
+  margin-bottom: 4px !important;
+}
+
+.navButton {
+  border-radius: 10px !important;
+  padding: 10px 12px !important;
+  min-height: 56px;
+  position: relative;
+  transition: all 0.2s ease !important;
+  overflow: hidden;
+}
+
+.navButton:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.navButtonActive {
+  background: rgba(24, 131, 126, 0.25) !important;
+  border: 1px solid rgba(24, 131, 126, 0.3) !important;
+}
+
+.navButtonActive:hover {
+  background: rgba(24, 131, 126, 0.3) !important;
+}
+
+.activeIndicator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  background: #18837E;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 0 8px rgba(24, 131, 126, 0.6);
+}
+
+.navIcon {
+  color: rgba(255, 255, 255, 0.55) !important;
+  transition: color 0.2s ease !important;
+}
+
+.navIconActive {
+  color: #18837E !important;
+  filter: drop-shadow(0 0 6px rgba(24, 131, 126, 0.5));
+}
+
+.bottomStrip {
+  margin-top: auto;
+  padding-bottom: 16px;
+}
+
+.bottomContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0 0;
+  gap: 2px;
+}
+
+.bottomContentCollapsed {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 0;
+}
+
+.bottomText {
+  color: rgba(255, 255, 255, 0.35) !important;
+  font-size: 0.65rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+.bottomBrand {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  font-family: 'DM Sans', sans-serif !important;
+}

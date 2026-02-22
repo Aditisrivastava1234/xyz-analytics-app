@@ -1,0 +1,351 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #F2F2F2;
+}
+
+.content {
+  flex: 1;
+}
+
+/* ── Hero ── */
+.heroSection {
+  position: relative;
+  padding: 0 0 0;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #004975 0%, #18837E 60%, #0d6b67 100%);
+  z-index: 0;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding: 48px 40px 32px;
+  max-width: 780px;
+}
+
+.heroBadge {
+  background: rgba(255,255,255,0.15) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.25) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.75rem !important;
+  margin-bottom: 20px !important;
+}
+
+.heroTitle {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: clamp(1.8rem, 4vw, 2.8rem) !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  line-height: 1.2 !important;
+  margin-bottom: 16px !important;
+}
+
+.heroAccent {
+  color: #7ececa !important;
+}
+
+.heroSubtitle {
+  font-family: 'DM Sans', sans-serif !important;
+  color: rgba(255,255,255,0.8) !important;
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+  margin-bottom: 28px !important;
+  max-width: 620px;
+}
+
+.heroCta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  background: rgba(255,255,255,0.18) !important;
+  border: 1.5px solid rgba(255,255,255,0.4) !important;
+  color: #fff !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  text-transform: none !important;
+  padding: 10px 22px !important;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease !important;
+}
+.ctaPrimary:hover {
+  background: rgba(255,255,255,0.28) !important;
+}
+
+.ctaSecondary {
+  border: 1.5px solid rgba(255,255,255,0.5) !important;
+  color: #fff !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 500 !important;
+  border-radius: 10px !important;
+  text-transform: none !important;
+  padding: 10px 22px !important;
+  transition: all 0.2s ease !important;
+}
+.ctaSecondary:hover {
+  background: rgba(255,255,255,0.1) !important;
+}
+
+/* Quick Stats */
+.statsRow {
+  position: relative;
+  z-index: 1;
+  padding: 20px 32px 32px !important;
+}
+
+.quickStat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  animation: fadeInUp 0.5s ease both;
+}
+
+.statAvatar {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.statValue {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  font-size: 1rem !important;
+  line-height: 1.2 !important;
+}
+
+.statLabel {
+  font-family: 'DM Sans', sans-serif !important;
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.7rem !important;
+}
+
+/* ── Sections ── */
+.section {
+  padding: 40px 40px 32px;
+  background: #F2F2F2;
+}
+
+.sectionLabel {
+  font-family: 'DM Sans', sans-serif !important;
+  color: #18837E !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.12em !important;
+  font-weight: 600 !important;
+}
+
+.sectionTitle {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+  color: #1A1A2E !important;
+  margin-bottom: 24px !important;
+}
+
+/* Dashboard Cards */
+.dashboardCards {
+  margin-top: 8px !important;
+}
+
+.dashCard {
+  border-radius: 16px !important;
+  border: 1px solid rgba(0,0,0,0.06) !important;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease !important;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.dashCardContent {
+  padding: 28px !important;
+}
+
+.dashCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.dashCardIcon {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.dashCardArrow {
+  opacity: 0.5;
+  transition: all 0.2s ease;
+}
+
+.dashCard:hover .dashCardArrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+.dashCardTitle {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.2rem !important;
+  margin-bottom: 10px !important;
+}
+
+.dashCardDesc {
+  font-family: 'DM Sans', sans-serif !important;
+  color: rgba(0,0,0,0.55) !important;
+  line-height: 1.6 !important;
+  font-size: 0.87rem !important;
+}
+
+.kpiList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 14px 0 8px;
+}
+
+.kpiItem {
+  font-family: 'DM Sans', sans-serif !important;
+  color: rgba(0,0,0,0.6) !important;
+  font-size: 0.78rem !important;
+}
+
+.dashCardDivider {
+  margin: 14px 0 !important;
+  border-color: rgba(0,0,0,0.06) !important;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.72rem !important;
+  border: 1px solid !important;
+}
+
+.dashCardAccent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+/* ── Key Metrics Section ── */
+.metricsSection {
+  padding: 32px 40px;
+  background: #fff;
+}
+
+.metricCard {
+  background: #F2F2F2;
+  border-radius: 12px;
+  padding: 16px 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metricCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.metricValue {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+
+.metricLabel {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  color: #1A1A2E !important;
+  display: block;
+  margin-top: 4px;
+}
+
+.metricSub {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.68rem !important;
+  color: rgba(0,0,0,0.4) !important;
+  display: block;
+}
+
+/* ── Data Section ── */
+.dataSection {
+  padding: 32px 40px 40px;
+  background: #F2F2F2;
+}
+
+.dataText {
+  font-family: 'DM Sans', sans-serif !important;
+  color: rgba(0,0,0,0.6) !important;
+  line-height: 1.7 !important;
+  margin-top: 12px !important;
+}
+
+.dataCards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dataCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.dataCardName {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+}
+
+.dataCardDesc {
+  font-family: 'DM Sans', sans-serif !important;
+  color: rgba(0,0,0,0.55) !important;
+  font-size: 0.75rem !important;
+}
+
+.dataCardDetail {
+  font-family: 'DM Sans', sans-serif !important;
+  color: rgba(0,0,0,0.38) !important;
+  font-size: 0.68rem !important;
+  margin-top: 2px !important;
+  display: block;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .heroContent  { padding: 32px 20px 24px; }
+  .statsRow     { padding: 12px 16px 24px !important; }
+  .section      { padding: 28px 20px; }
+  .metricsSection { padding: 28px 20px; }
+  .dataSection  { padding: 28px 20px 32px; }
+}
